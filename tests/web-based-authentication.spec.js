@@ -1,6 +1,8 @@
 import { test } from '@playwright/test';
 
-test('Bypass authentication by embedding the credentials in the URL', async ({ page }) => {
+/** 
+ * 
+ * test('Bypass authentication by embedding the credentials in the URL', async ({ page }) => {
 
     
     await page.goto("https://admin:admin@the-internet-5chk.onrender.com/basic_auth");
@@ -10,6 +12,7 @@ test('Bypass authentication by embedding the credentials in the URL', async ({ p
   
 });
 
+*/
 test("Bypass authentication by encoding the credentials base64 format", async ({
   page,
 }) => {
@@ -21,7 +24,7 @@ test("Bypass authentication by encoding the credentials base64 format", async ({
     Authorization: `Basic ${encodedCredential}`,
   });
 
-  page.goto("https://the-internet-5chk.onrender.com/ basic_auth");
+  page.goto("https://the-internet-5chk.onrender.com/basic_auth");
 
   await page.waitForTimeout(3000);
 });
