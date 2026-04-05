@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from "@playwright/test";
 
 /** 
  * 
@@ -9,7 +9,6 @@ import { test } from '@playwright/test';
 
     await page.waitForTimeout(3000);
 
-  
 });
 
 */
